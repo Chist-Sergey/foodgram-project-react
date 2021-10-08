@@ -1,5 +1,5 @@
 # Foodgram ![foodgram-project-react workflow](https://github.com/Chist-Sergey/foodgram-project-react/actions/workflows/main.yml/badge.svg)
-Продуктовый попощник
+Продуктовый помошник
 
 ## Описание
 

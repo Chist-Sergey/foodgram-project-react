@@ -26,7 +26,7 @@ services:
     - ./.env
 
   frontend:
-    image: chistovsergeivadimovich/f00dgram-project-front:v1.0
+    image: chistovsergeivadimovich/f00dgram-project-front:latest
     volumes:
       - frontend_data:/app/build/
 
