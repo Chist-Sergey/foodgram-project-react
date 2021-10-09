@@ -130,3 +130,10 @@ dmypy.json
 
 # .idea
 .idea
+
+.vscode/
+.jsonbeautify
+setup.cfg
+.jsbeautifyrc
+.DS_Store
+.DS_Store
