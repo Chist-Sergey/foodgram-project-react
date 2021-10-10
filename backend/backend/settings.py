@@ -89,7 +89,7 @@ AUTH_USER_MODEL = 'users.User'
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'GMT'
 
 USE_I18N = True
 
