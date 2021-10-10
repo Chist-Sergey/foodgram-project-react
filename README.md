@@ -1,7 +1,7 @@
 # praktikum_new_diplom
 ![foodgram-project-react workflow](https://github.com/Chist-Sergey/foodgram-project-react/actions/workflows/main.yml/badge.svg)
 
-Демоверсия сайта: <http://ip--->
+Демоверсия сайта: <http://84.201.162.161>
 
 
 <h3> Установка и развертывание </h3>
@@ -53,7 +53,7 @@ https://docs.docker.com/engine/install/
 ### Заполнения базы начальными данными
 ``` docker-compose exec backend python manage.py loaddata fixtures/fixtures.json ```Shell
 
-### Работал над проектом: Серега - ученик Яндекс.Практикум
-https://hub.docker.com/repository/docker/Chist-Sergey/foodgram - dockerhub - dockerhub
+### Работал над проектом: Чистов С. В. - ученик Яндекс.Практикум
+https://hub.docker.com/repository/docker/Chist-Sergey/foodgram - dockerhub
 
-http://ip---/ - облако
+http://84.201.162.161/ - облако
