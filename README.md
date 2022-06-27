@@ -1,17 +1,78 @@
-# Foodgram ![foodgram-project-react workflow](https://github.com/Chist-Sergey/foodgram-project-react/actions/workflows/main.yml/badge.svg)
-Продуктовый помошник
+# praktikum_new_diplom
+![foodgram-project-react workflow](https://github.com/Chist-Sergey/foodgram-project-react/actions/workflows/main.yml/badge.svg)
 
-## Описание
+Демоверсия сайта: <http://ip--->
 
-На этом сервисе пользователи смогут публиковать рецепты, подписываться на публикации других пользователей, добавлять понравившиеся рецепты в список «Избранное» или «Список покупок», а перед походом в магазин скачивать сводный список продуктов, необходимых для приготовления одного или нескольких выбранных блюд.
+Это проект Foodgram, сервис с возможностями:
+- Регистрация пользователей,
+- Создание, изменение и удаление рецептов.
+- Фильтрация рецептов по тегам.
+- Подписка на авторов и просмотр рецептов определенного автора.
+- Добавление рецептов и формирование списка покупок для их приготовления.
 
-Проект доступен по адресу http://84.201.162.161.
+---
 
-### Регистрация и авторизация пользователей
+Настроен Continuous Integration и Continuous Deployment для проекта Foodgram: автоматический запуск тестов, обновление образов на Docker Hub и автоматический деплой на боевой сервер при пуше в ветку main.
 
-Регистрация пользователей происходит по форме на сайте. Для авторизации необходимо ввести почту и пароль.
+---
+### Технологии
+- Python 3.8.5
+- Django 3.0.5
+- Docker-compose 3.7
+- nginx 1.19.3
+- postgres 12.4
 
-## Установка
-Проект развернут с помощью docker и docker-compose на Яндекс.Облаке.
 
+<h3> Установка и развертывание </h3>
+После выполнения push необходимо зайти на сервер
 
+    $ ssh yc-user@<IP адрес>
+
+## Подготовка и запуск проекта
+### Склонировать репозиторий на локальную машину:
+```
+git clone https://github.com/Chist-Sergey/foodgram-project-react
+```
+### Перейти в папку с проектом:
+```
+cd foodgram-project-react
+```
+### В папке **backend** создать файл .env с содержимым переменных окружения:
+
+```
+DB_ENGINE=db
+POSTGRES_DB=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+DB_HOST=postgres
+DB_PORT=postgres
+```
+
+### Установка докер
+https://docs.docker.com/engine/install/
+
+### Запуск проекта из директории infra
+``` docker-compose up -d --build ```Shell
+
+### Создание миграций приложения пользователей
+```docker-compose exec backend python manage.py makemigrations users```Shell
+
+### Создание миграций приложения рецептов
+```docker-compose exec backend python manage.py makemigrations api```Shell
+
+### Сбор статики
+```docker-compose exec backend python manage.py collectstatic --no-input```Shell
+
+### Миграции
+```docker-compose exec backend python manage.py migrate --noinput```Shell
+
+### Cоздания суперпользователя 
+``` docker-compose exec backend python manage.py createsuperuser ```Shell
+
+### Заполнения базы начальными данными
+``` docker-compose exec backend python manage.py loaddata fixtures/fixtures.json ```Shell
+
+### Работал над проектом: Алексей A. Белов - ученик Яндекс.Практикум
+https://hub.docker.com/repository/docker/Chist-Sergey/foodgram - dockerhub - dockerhub
+
+http://84.201.162.161/admin/login/?next=/admin/ - облако
