@@ -1,26 +1,7 @@
 # praktikum_new_diplom
 ![foodgram-project-react workflow](https://github.com/Chist-Sergey/foodgram-project-react/actions/workflows/main.yml/badge.svg)
 
-Демоверсия сайта: <http://ip--->
-
-Это проект Foodgram, сервис с возможностями:
-- Регистрация пользователей,
-- Создание, изменение и удаление рецептов.
-- Фильтрация рецептов по тегам.
-- Подписка на авторов и просмотр рецептов определенного автора.
-- Добавление рецептов и формирование списка покупок для их приготовления.
-
----
-
-Настроен Continuous Integration и Continuous Deployment для проекта Foodgram: автоматический запуск тестов, обновление образов на Docker Hub и автоматический деплой на боевой сервер при пуше в ветку main.
-
----
-### Технологии
-- Python 3.8.5
-- Django 3.0.5
-- Docker-compose 3.7
-- nginx 1.19.3
-- postgres 12.4
+Демоверсия сайта: <http://84.201.162.161>
 
 
 <h3> Установка и развертывание </h3>
@@ -37,7 +18,7 @@ git clone https://github.com/Chist-Sergey/foodgram-project-react
 ```
 cd foodgram-project-react
 ```
-### В папке **backend** создать файл .env с содержимым переменных окружения:
+### В папке **infra** создать файл .env с содержимым переменных окружения:
 
 ```
 DB_ENGINE=db
@@ -72,7 +53,7 @@ https://docs.docker.com/engine/install/
 ### Заполнения базы начальными данными
 ``` docker-compose exec backend python manage.py loaddata fixtures/fixtures.json ```Shell
 
-### Работал над проектом: Алексей A. Белов - ученик Яндекс.Практикум
-https://hub.docker.com/repository/docker/Chist-Sergey/foodgram - dockerhub - dockerhub
+### Работал над проектом: Чистов С. В. - ученик Яндекс.Практикум
+https://hub.docker.com/repository/docker/Chist-Sergey/foodgram - dockerhub
 
-http://84.201.162.161/admin/login/?next=/admin/ - облако
+http://84.201.162.161/ - облако
